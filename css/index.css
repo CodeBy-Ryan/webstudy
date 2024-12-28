@@ -123,6 +123,11 @@ body {
   border-radius: 5px;
 }
 
+.button a:hover {
+  background-color: rgb(1, 110, 143);
+  transition: 0.9s;
+}
+
 .Conteúdo-principal-escrito-botão:hover {
   background-color: rgb(214, 214, 214);
 }
