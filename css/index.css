@@ -10,7 +10,7 @@
 
 body {
   font-size: 100%;
-  background: linear-gradient(0deg, #58d1f7, #7cb1a4, #8a8c85);
+  background: linear-gradient(146deg, #5490ea, #0095b4, #c6febe);
 }
 
 .Cabeçalho {
@@ -68,28 +68,59 @@ body {
   font-size: 24px;
 }
 
-.Conteúdo-principal-escrito-botão {
-  /* Estilizando o botão */
-  background-color: whitesmoke;
-  width: 180px;
-  height: 60px;
-  border: none;
-  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
 
-  /* Estilizando a fonte dentro do botão */
-  font-family: "Sarala", serif;
-  color: black;
-  font-weight: 400;
-  font-size: 15px;
+.button a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #2baaff;
+  display: block;
+  position: relative;
+  padding: 20px 40px;
 
-  /* Alinhamento central do texto */
-  display: flex; /* Usando flexbox */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
 
-  /* Cursor para indicar que é clicável */
-  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #005091;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #005091;
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #005091;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button a:active {
+  top: 10px;
+  background-color: #0400f7;
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #005091;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #005091;
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #005091;
+}
+
+.button:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2b1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .Conteúdo-principal-escrito-botão:hover {
