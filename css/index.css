@@ -85,12 +85,15 @@ body {
   display: block;
   position: relative;
   padding: 20px 40px;
+
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
   filter: dropshadow(color=#000, offx=0px, offy=1px);
+
   -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #005091;
   -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #005091;
   box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #005091;
+
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -99,8 +102,9 @@ body {
 .button a:active {
   top: 10px;
   background-color: #0400f7;
+
   -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #005091;
-  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #005091;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #005091;
   box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #005091;
 }
 
@@ -168,97 +172,62 @@ body {
   margin: 0 auto;
 }
 
-/* Media Queries para Responsividade */
-
-/* Telas pequenas (smartphones) */
-@media (max-width: 480px) {
+/* Para telas menores (dispositivos móveis) */
+@media screen and (max-width: 768px) {
   .Cabeçalho {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px;
+    flex-direction: column; /* Empilha a imagem e os menus verticalmente */
+    align-items: center;
   }
 
   .Cabeçalho-Menu {
-    flex-direction: column;
+    flex-direction: column; /* Alinha os itens do menu verticalmente */
     gap: 16px;
   }
 
-  .Cabeçalho-menu-item {
-    font-size: 14px;
+  .Cabeçalho-imagem {
+    height: 50px; /* Reduz a altura da imagem no celular */
   }
 
   .Conteúdo-principal {
-    flex-direction: column;
+    flex-direction: column; /* Empilha a imagem e o texto verticalmente */
     align-items: center;
-    gap: 32px;
   }
 
   .Conteúdo-principal-imagem {
-    height: 300px;
+    width: 100%; /* Deixa a imagem responsiva, ocupando toda a largura da tela */
+    height: auto; /* Ajusta a altura da imagem */
   }
 
   .Conteúdo-principal-escrito-título {
-    font-size: 40px;
+    font-size: 48px; /* Reduz o tamanho da fonte */
   }
 
   .Conteúdo-principal-escrito-subtítulo {
-    font-size: 18px;
+    font-size: 18px; /* Reduz o tamanho da fonte */
   }
 
   .button a {
-    font-size: 24px;
-    padding: 12px 24px;
-  }
-
-  .Conteúdo-secundário-título {
-    font-size: 24px;
-  }
-
-  .Conteúdo-secundário-parágrafo {
-    font-size: 16px;
+    font-size: 24px; /* Ajusta o tamanho do texto no botão */
+    padding: 16px 32px; /* Ajusta o padding do botão */
   }
 }
 
-/* Telas médias (tablets) */
-@media (max-width: 768px) {
-  .Cabeçalho {
-    flex-direction: column;
-    padding: 16px;
-  }
-
-  .Cabeçalho-Menu {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .Conteúdo-principal {
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .Conteúdo-principal-imagem {
-    height: 350px;
+/* Para telas muito pequenas (ex: smartphones muito pequenos) */
+@media screen and (max-width: 480px) {
+  .Cabeçalho-imagem {
+    height: 40px; /* Imagem ainda menor */
   }
 
   .Conteúdo-principal-escrito-título {
-    font-size: 50px;
+    font-size: 32px; /* Fontes menores */
   }
 
   .Conteúdo-principal-escrito-subtítulo {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .button a {
-    font-size: 28px;
-    padding: 16px 32px;
-  }
-
-  .Conteúdo-secundário-título {
-    font-size: 26px;
-  }
-
-  .Conteúdo-secundário-parágrafo {
-    font-size: 18px;
+    font-size: 18px; /* Tamanho da fonte do botão reduzido */
+    padding: 12px 24px; /* Ajuste do padding */
   }
 }
